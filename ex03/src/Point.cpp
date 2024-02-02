@@ -1,28 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Point.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gbazart <gbazart@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/31 19:41:17 by gbazart           #+#    #+#             */
-/*   Updated: 2024/02/02 15:06:41 by gbazart          ###   ########.fr       */
+/*   Created: 2024/02/02 17:51:44 by gbazart           #+#    #+#             */
+/*   Updated: 2024/02/02 17:57:32 by gbazart          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include "Point.hpp"
 
-int main( void )
+Point::Point(void) : x(Fixed(0)), y(Fixed(0))
 {
-	Fixed a;
-	Fixed b( a );
-	Fixed c;
+}
 
-	c = b;
+Point::Point(Fixed x, Fixed y) : x(x), y(y)
+{
+}
 
-	std::cout << a.getRawBits() << std::endl;
-	std::cout << b.getRawBits() << std::endl;
-	std::cout << c.getRawBits() << std::endl;
+Point::Point(Point const& point)
+{
+	// std::cout << "Copy constructor called" << std::endl;
+	this->x.setRawBits(point.x.getRawBits());
+	this->y.setRawBits(point.y.getRawBits());
+}
 
-	return (0);
+Point&	Point::operator=(Point point)
+{
+}
+
+Point::~Point()
+{
 }

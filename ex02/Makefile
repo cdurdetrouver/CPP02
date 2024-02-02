@@ -1,4 +1,4 @@
-NAME = Fixed
+NAME = Fixed3
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -I$(INCLUDE)
 INCLUDE = includes
 SRC_DIR = src
