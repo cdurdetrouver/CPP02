@@ -1,1 +1,8 @@
+.vscode
+
 *.o
+
+# executable
+ex00/Fixed
+ex01/Fixed2
+ex02/BSP
