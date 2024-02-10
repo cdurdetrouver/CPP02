@@ -6,7 +6,7 @@
 /*   By: gbazart <gbazart@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 19:40:34 by gbazart           #+#    #+#             */
-/*   Updated: 2024/02/02 17:42:26 by gbazart          ###   ########.fr       */
+/*   Updated: 2024/02/10 11:25:06 by gbazart          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ class Fixed
 		bool				operator==(Fixed fixed);
 		bool				operator!=(Fixed fixed);
 
-		Fixed&				operator=(Fixed fixed);
+		Fixed				&operator=(const Fixed &fixed);
 		Fixed				operator+(Fixed fixed);
 		Fixed				operator-(Fixed fixed);
 		Fixed				operator*(Fixed fixed);

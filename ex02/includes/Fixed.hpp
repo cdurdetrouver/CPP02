@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gbazart <gabriel.bazart@gmail.com>         +#+  +:+       +#+        */
+/*   By: gbazart <gbazart@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 19:40:34 by gbazart           #+#    #+#             */
-/*   Updated: 2024/02/04 15:33:07 by gbazart          ###   ########.fr       */
+/*   Updated: 2024/02/10 11:22:37 by gbazart          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ class Fixed
 		bool				operator==(Fixed fixed);
 		bool				operator!=(Fixed fixed);
 
-		Fixed&				operator=(Fixed fixed);
+		Fixed				&operator=(const Fixed &fixed);
 		Fixed				operator+(Fixed fixed);
 		Fixed				operator-(Fixed fixed);
 		Fixed				operator*(Fixed fixed);

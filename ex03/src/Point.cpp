@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Point.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gbazart <gabriel.bazart@gmail.com>         +#+  +:+       +#+        */
+/*   By: gbazart <gbazart@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 17:51:44 by gbazart           #+#    #+#             */
-/*   Updated: 2024/02/04 17:36:10 by gbazart          ###   ########.fr       */
+/*   Updated: 2024/02/10 11:32:34 by gbazart          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,25 +16,29 @@ Point::Point(void) : x(Fixed(0)), y(Fixed(0))
 {
 }
 
-Point::Point(const Fixed x, const Fixed y) : x(x), y(y)
+Point::Point(Fixed x, Fixed y) : x(x), y(y)
 {
 }
 
-Point::Point(const Point& point) : x(point.x), y(point.y)
+Point::Point(Point const& point) : x(point.x), y(point.y)
 {
 }
 
-Point&  Point::operator=(const Point& point) {
+Point&	Point::operator=(const Point& point)
+{
 	if (this != &point)
-		*this = point;
-	return *this;
+	{
+		const_cast<Fixed&>(this->x) = point.getx();
+		const_cast<Fixed&>(this->y) = point.gety();
+	}
+	return (*this);
 }
 
 Point::~Point()
 {
 }
 
-Fixed	Point::getx() const
+Fixed	Point::getx(void) const
 {
 	return (this->x);
 }

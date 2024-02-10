@@ -6,7 +6,7 @@
 /*   By: gbazart <gbazart@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 19:40:34 by gbazart           #+#    #+#             */
-/*   Updated: 2024/02/02 15:00:55 by gbazart          ###   ########.fr       */
+/*   Updated: 2024/02/09 10:19:58 by gbazart          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ class Fixed
 		static const int bit;
 	public:
 		Fixed(void);
-		Fixed(Fixed &fixed);
+		Fixed(const	Fixed &fixed);
 		~Fixed();
 
-		void	operator=(Fixed fixed);
+		Fixed	&operator=(const Fixed &fixed);
 		int		getRawBits( void ) const;
 		void	setRawBits( int const raw );
 };

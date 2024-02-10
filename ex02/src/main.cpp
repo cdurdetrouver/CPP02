@@ -3,23 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gbazart <gabriel.bazart@gmail.com>         +#+  +:+       +#+        */
+/*   By: gbazart <gbazart@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/04 17:20:15 by gbazart           #+#    #+#             */
-/*   Updated: 2024/02/04 17:20:20 by gbazart          ###   ########.fr       */
+/*   Created: 2024/01/31 19:41:17 by gbazart           #+#    #+#             */
+/*   Updated: 2024/02/10 11:24:15 by gbazart          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
+
 int main( void )
 {
-	Fixed a;
+	Fixed a(3);
 	Fixed b( Fixed( 5.05f ) * Fixed( 2 ) );
 	Fixed c;
 
 	c = a;
 	std::cout << "c (after assignment from a) " << c << std::endl;
+	a = Fixed(0);
 
 	Fixed d = a + b;
 	std::cout << "d (a + b) " << d << std::endl;
